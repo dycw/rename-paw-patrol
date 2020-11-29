@@ -9,6 +9,7 @@ from pytest import mark
 from rename_paw_patrol import clean_name
 from rename_paw_patrol import PATTERN_CLEAN
 
+
 T = TypeVar("T")
 
 
