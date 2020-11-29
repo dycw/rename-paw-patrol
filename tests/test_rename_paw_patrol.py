@@ -25,6 +25,10 @@ T = TypeVar("T")
                 "Paw.Patrol.S04E13.Pups.Save.The.Carnival.1080p.WEB-DL.AAC.2.0.H264.mkv",  # noqa: E501
                 "S04E13 - Pups Save The Carnival.mkv",
             ),
+            (
+                "PAW.Patrol.S04E32.Sea.Patrol.Pirate.Pups.to.the.Rescue.1080p.NICK.WEB-DL.AAC2.0.x264-RTN.mkv",  # noqa: E501
+                "S04E32 - Sea Patrol Pirate Pups To The Rescue.mkv",
+            ),
         ],
     ),
 )
