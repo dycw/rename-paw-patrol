@@ -15,7 +15,12 @@ T = TypeVar("T")
     Callable[[T], T],
     mark.parametrize(
         "old, new",
-        [("rstto-", "rst")],
+        [
+            (
+                "Paw.Patrol.S04E01.Pups.Save.A.Blimp.1080p.WEB-DL.AAC2.0.H.264.mkv",
+                "S04E01 - Pups Save A Blimp.mkv",
+            ),
+        ],
     ),
 )
 def test_clean_name(old: str, new: str) -> None:

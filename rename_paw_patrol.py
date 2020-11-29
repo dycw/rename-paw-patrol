@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-
-__version__ = "0.0.1"
-
 from pathlib import Path
+from re import IGNORECASE
 from re import search
 from string import capwords
 from typing import Iterator
+
+
+__version__ = "0.0.1"
 
 
 def yield_files() -> Iterator[Path]:
@@ -19,15 +20,9 @@ def yield_files() -> Iterator[Path]:
 def clean_name(name: str) -> str:
     if (
         match := search(
-            r"(?:paw\.patrols)?"
-            r"\.?"
-            r"s(\d{2})e(\d{2})"
-            r"\.?"
-            r"([\w\.\'-]+)"
-            r"(?:[\d+p|.\d+p.web-dl.aac.2.0.h.?264])?"
-            r"\.?"
-            r"(mp4|mkv)",
+            r"(?:Paw\.Patrol)?\.?s(\d{2})e(\d{2})\.([\w\.\'-]+?)(?:\.?\d+p\.WEB\-DL\.AAC2\.0\.H\.264)\.?(mp4|mkv)",  # noqa: E501
             name,
+            flags=IGNORECASE,
         )
     ) is not None:
         season, ep_no, ep_name, ext = match.groups()
