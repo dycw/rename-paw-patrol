@@ -28,12 +28,12 @@ def clean_name(name: str) -> str:
     if (match := PATTERN_RENAME.search(name)) is not None:
         season, ep_no, ep_name, ext = match.groups()
         ep_name = capwords(ep_name.replace(".", " "))
-        return f"S{season}E{ep_no} - {ep_name}.{ext}"
+        return f"Paw Patrol S{season}E{ep_no} {ep_name}.{ext}"
     else:
         raise ValueError(f"Could not match the following:\n    {name}")
 
 
-PATTERN_CLEAN = re.compile(r"S\d{2}E\d{2} - [\s\w!'-]+\.[mp4|mkv]")
+PATTERN_CLEAN = re.compile(r"Paw Patrol S\d{2}E\d{2} [\s\w!'-]+\.[mp4|mkv]")
 
 
 def process_file(path: Path) -> None:
