@@ -19,7 +19,7 @@ def yield_files() -> Iterator[Path]:
 
 
 PATTERN_RENAME = re.compile(
-    r"(?:Paw\.Patrol)?\.?s(\d{2})e(\d{2})\.([\w\.\'-]+?)(?:\.eng)?(?:\.?\d+p(?:(?:\.NICK)?\.WEB[\w\-]*\.AAC\.?2\.0\.[Hx]\.?264(?:\-RTN)?)?)\.(mp4|mkv)",  # noqa: E501
+    r"(?:Paw\.Patrol)?\.?s(\d{2})e(\d{2})\.([\w\.!'-]+?)(?:\.eng)?(?:\.?\d+p(?:(?:\.NICK)?\.WEB[\w\-]*(?:\.AAC\.?2\.0)?\.[Hx]\.?264(?:\-RTN)?)?)\.(mp4|mkv)",  # noqa: E501
     flags=IGNORECASE,
 )
 
@@ -33,7 +33,7 @@ def clean_name(name: str) -> str:
         raise ValueError(f"Could not match the following:\n    {name}")
 
 
-PATTERN_CLEAN = re.compile(r"S\d{2}E\d{2} - [\s\w\'\-]+\.[mp4|mkv]")
+PATTERN_CLEAN = re.compile(r"S\d{2}E\d{2} - [\s\w!'-]+\.[mp4|mkv]")
 
 
 def process_file(path: Path) -> None:

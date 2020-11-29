@@ -22,6 +22,10 @@ T = TypeVar("T")
                 "S03E12 - Pups Save The Paw Patroller.mkv",
             ),
             (
+                "PAW.Patrol.S03E25.Tracker.Joins.the.Pups!.1080p.WEBRip.x264.mkv",
+                "S03E25 - Tracker Joins The Pups!.mkv",
+            ),
+            (
                 "Paw.Patrol.S04E01.Pups.Save.A.Blimp.1080p.WEB-DL.AAC2.0.H.264.mkv",
                 "S04E01 - Pups Save A Blimp.mkv",
             ),
