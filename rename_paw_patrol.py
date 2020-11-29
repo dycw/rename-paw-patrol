@@ -19,7 +19,7 @@ def yield_files() -> Iterator[Path]:
 
 
 PATTERN_RENAME = re.compile(
-    r"(?:Paw\.Patrol)?\.?s(\d{2})e(\d{2})\.([\w\.!'-]+?)(?:\.eng)?(?:\.?\d+p(?:(?:\.NICK)?\.WEB[\w\-]*(?:\.AAC\.?2\.0)?\.[Hx]\.?264(?:\-RTN)?)?)\.(mp4|mkv)",  # noqa: E501
+    r"(?:Paw\.Patrol)?\.?s(\d{2})e(\d{2})\.([\w\.!'-]+?)(?:\.eng)?(?:\.?\d+p(?:(?:\.[A-Z\d\.-]+)?))\.(mp4|mkv)",  # noqa: E501
     flags=IGNORECASE,
 )
 

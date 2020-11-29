@@ -18,6 +18,10 @@ T = TypeVar("T")
         "old, new",
         [
             (
+                "PAW.Patrol.S01E23.Pups.and.the.Ghost.Pirate.720p.WEBRip.x264.AAC.mp4",
+                "S01E23 - Pups And The Ghost Pirate.mp4",
+            ),
+            (
                 "Paw.patrol.S03E12.pups.save.the.paw.patroller.eng.1080p.mkv",
                 "S03E12 - Pups Save The Paw Patroller.mkv",
             ),
