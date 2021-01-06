@@ -9,7 +9,7 @@ from string import capwords
 from typing import Iterator
 
 
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 
 
 def yield_files() -> Iterator[Path]:
