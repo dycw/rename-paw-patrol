@@ -1,15 +1,24 @@
 #!/usr/bin/env python3
-from __future__ import annotations
-
 import re
+from logging import basicConfig
+from logging import getLogger
+from logging import INFO
 from pathlib import Path
 from re import IGNORECASE
 from re import search
 from string import capwords
+from sys import stdout
 from typing import Iterator
 
 
-__version__ = "0.0.4"
+basicConfig(
+    datefmt="%Y-%m-%d %H:%M:%S",
+    format="{asctime}: {msg}",
+    level=INFO,
+    stream=stdout,
+    style="{",
+)
+LOGGER = getLogger(__file__)
 
 
 def yield_files() -> Iterator[Path]:
@@ -41,10 +50,10 @@ def process_file(path: Path) -> None:
     if PATTERN_CLEAN.search(old_name):
         return
     else:
-        print(f"Needs processing:\n    {old_name}")
+        LOGGER.info(f"Needs processing:\n    {old_name}")
         new_name = clean_name(old_name)
         while True:
-            ans = input(  # noqa: S322
+            ans = input(
                 f"Rename as follows? (y/n)\n    {new_name}\n>>> ",
             )
             if ans == "y":
